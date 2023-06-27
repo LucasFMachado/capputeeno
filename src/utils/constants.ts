@@ -1,0 +1,1 @@
+export const DELIVERY_FEE_IN_CENTS = 4000

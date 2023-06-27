@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Capputeeno
 
 ## Getting Started
 
-First, run the development server:
-
+First, install fake API dependencies and run:
 ```bash
-npm run dev
+# Enter on API folder:
+cd api
+
+# Install dependencies:
+yarn
 # or
-yarn dev
+npm install
+
+# Run API:
+yarn start
 # or
-pnpm dev
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, install project dependencies and run (make sure you are in the root folder of the project):
+```bash
+# Install dependencies:
+yarn
+# or
+npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Run project:
+yarn dev
+# or
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Finally, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+<hr />
 
-To learn more about Next.js, take a look at the following resources:
+## Technical choices:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**- Project creation:**
+  
+  I created the project using create next-app (https://nextjs.org/docs/api-reference/create-next-app). The Next version used was 13, and the project uses the new concepts and features of this version.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+**- Architecture**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  I divided the project in a way that it could be scalable. I preferred to leave the styling files inside their respective folders (with the exception of the global and home styles), so that later maintenance would be easier.
+  To make requests to the API, was used libraries like **tanstack/react-query** (to manage the cache and the states of the requests) and **axios** (to make the HTTP request).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+**- Styles:**
+
+  For the styling of the project, I used the **styled-components** library. I really like using this library because I think it keeps the code organized, and makes it much easier to style using cascade.
+
+
+**- Code styling:**
+
+  For pattern of project's code, I used the eslint and prettier libraries, so that coding rules and patterns could be implemented.
+
+
+## Main technologies used in the project:
+
+* [NextJS](https://nextjs.org)
+* [TypesCript](https://www.typescriptlang.org)
+* [Styled-Components](https://styled-components.com)
+* [ESLint](https://eslint.org)
+* [Prettier](https://prettier.io)
+* [TanStack/React-Query](https://tanstack.com/query)
+* [Axios](https://axios-http.com)
+
+
+## Project images:
+
+Product list:
+<br />
+![Product list image](https://github.com/LucasFMachado/caputeeno/assets/28274599/0f762783-0db2-4e97-ab8e-b8bc21ead51f)
+
+Product information:
+<br />
+![Product info image](https://github.com/LucasFMachado/caputeeno/assets/28274599/3ef05eb6-ace2-49e8-8ddb-035bc5ee4446)
+
+Cart image:
+<br />
+![Cart image](https://github.com/LucasFMachado/caputeeno/assets/28274599/a010b105-3afc-4664-82e8-e80e5e919ebf)

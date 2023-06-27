@@ -27,9 +27,14 @@ export const Input = styled.input`
   font-size: 12px;
   color: var(--color-grey-700);
   border: none;
+  display: none;
 
   @media (min-width: ${props => props.theme.desktopBreakpoint}) {
     font-size: 14px;
     line-height: 22px;
+  }
+
+  @media (min-width: ${props => props.theme.phoneBreakpoint}) {
+    display: initial;
   }
 `

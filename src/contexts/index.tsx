@@ -11,8 +11,9 @@ interface IContextsProvidersProps {
 }
 
 const theme = {
+  phoneBreakpoint: '600px',
   tabletBreakpoint: '768px',
-  desktopBreakpoint: '968px',
+  desktopBreakpoint: '992px',
 }
 
 export function ContextsProviders({ children }: IContextsProvidersProps) {
